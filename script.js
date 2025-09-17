@@ -117,7 +117,7 @@ function firstItem(arr) {
 }
 
 try {
-  const x = firstItem([3, 5, 6, 7]);
+  const x = firstItem([]);
   console.log("The maximum value in the array: " + Math.max(...x));  
 } 
 catch (e) {
@@ -137,4 +137,12 @@ Given: const words = ["ban", "babble", "make", "flab"];
 3) For matches, log "<word> matches!".
 4) Display the words that matches the pattern.
 */
+const words = ["cat", "rabbit", "dragon", "caterpillar"];
+const re = /cat/;
+
+words.forEach(w => {
+  if (re.test(w)) {
+    console.log(`${w} matches!`);
+  }
+});
 // End of Advance JavaScript Lab — good luck!
