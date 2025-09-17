@@ -21,6 +21,28 @@ Task:
 3) Add a setter updateGpa(newGpa) or use a set accessor for gpa that validates 0.0–4.0.
 4) Create an instance/object and output its attributes using the getter(s).
 */
+class Student{
+   constructor(firstName, lastName, GPA){
+      this.firstName = firstName;
+      this.lastName = lastName;
+      this.GPA = GPA;
+   }
+   getFullName(){
+      return this.firstName + " " + this.lastName;
+   }
+   setUpdateGPA(newGPA){
+      if (newGPA >=0 && newGPA <= 4){
+         this.GPA = newGPA;
+      }
+   }
+   getGpa(){
+      return this.GPA;
+   }
+}
+let Student1 = new Student('Shorooq', 'Abu Zaid', 3.1);
+console.log(Student1.getFullName());
+console.log(Student1.getGpa());
+
 
 // ====================================
 // TODO-2: OBJECT AS MAP + for...in LOOP
