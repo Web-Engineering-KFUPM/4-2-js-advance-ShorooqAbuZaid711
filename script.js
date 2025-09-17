@@ -43,7 +43,6 @@ let Student1 = new Student('Shorooq', 'Abu Zaid', 3.1);
 console.log(Student1.getFullName());
 console.log(Student1.getGpa());
 
-
 // ====================================
 // TODO-2: OBJECT AS MAP + for...in LOOP
 // ====================================
@@ -59,6 +58,7 @@ const courseTitles = {SWE206: "Intro to SWE",
 for (const code in courseTitles){
    console.log(code + " --> " + courseTitles[code]);
 }
+
 // =========================================
 // TODO-3: STRING OBJECT — charAt() & length
 // =========================================
@@ -71,6 +71,7 @@ const str = "Done with TODO-3";
 console.log("The length of the text: " + str.length);
 console.log("The first character in the text: " + str.charAt(0));
 console.log("The fourth character in the text: " + str.charAt(5));
+
 // ===================================
 // TODO-4: DATE — day, month, and year
 // ===================================
@@ -81,7 +82,9 @@ Task:
 //    (Hint: getDate(), getMonth(), getFullYear() )
 */
 const d = new Date();
-console.log(d.getDate() + "-" + (d.getMonth() + 1) + "-" + d.getFullYear());
+console.log(d.getDate() + "-" + (d.getMonth() + 1) + "-" +
+ d.getFullYear());
+
 // ============================================================
 // TODO-5: ARRAY + SPREAD — find MIN and MAX from 10 numbers
 // ============================================================
@@ -91,7 +94,11 @@ Task:
 2) Use spread syntax with Math.min(...) and Math.max(...) to find extremes.
 3) Display both values.
 */
-
+const nums = [10, 2, 30];
+const min = Math.min(...nums);
+const max = Math.max(...nums);
+console.log("The minimum value: " + min);
+console.log("The maximum value: " + max);
 // ===================================================================
 // TODO-6: EXCEPTIONS — try/catch/finally with EMPTY ARRAY edge case
 // ===================================================================
