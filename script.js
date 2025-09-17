@@ -94,7 +94,7 @@ Task:
 2) Use spread syntax with Math.min(...) and Math.max(...) to find extremes.
 3) Display both values.
 */
-const nums = [10, 2, 30];
+const nums = [10, 2, 30, 12, 22, 23, 7, 29, 19, 3];
 const min = Math.min(...nums);
 const max = Math.max(...nums);
 console.log("The minimum value: " + min);
@@ -109,7 +109,23 @@ Task:
 3) Handle the error using try { ... } catch (e) { ... } finally { ... } and log messages
    in each block so you can see the flow of control.
 */
+function firstItem(arr) {
+  if (!Array.isArray(arr) || arr.length === 0) {
+    throw new Error("Array must be non-empty.");
+  }
+  return arr[0];
+}
 
+try {
+  const x = firstItem([3, 5, 6, 7]);
+  console.log("The maximum value in the array: " + Math.max(...x));  
+} 
+catch (e) {
+  console.log("An error is catched:" + 
+   "Array must be non-empty.")
+} 
+finally {
+}
 // ===================================================================================
 // TODO-7: REGEX + forEach — find words containing 'ab' and log matches from the list
 // ===================================================================================
@@ -121,5 +137,4 @@ Given: const words = ["ban", "babble", "make", "flab"];
 3) For matches, log "<word> matches!".
 4) Display the words that matches the pattern.
 */
-
 // End of Advance JavaScript Lab — good luck!
